@@ -1,6 +1,9 @@
 # Cursor Plan-Build-Judge
 
-A reusable Cursor skill for complex tasks.
+**Plan first. Build within bounds. Judge by evidence.**
+
+A reusable Cursor skill for complex tasks.  
+Current version: **v0.1.0**
 
 It applies a three-stage workflow:
 
@@ -8,7 +11,37 @@ It applies a three-stage workflow:
 - **Builder** — implement strictly against that spec
 - **Judge** — review the result against the original request, the spec, and acceptance criteria using real evidence
 
+Differentiating defaults:
+
+- **spec-first**
+- **bounded execution**
+- **evidence-based review**
+- **stop after Planner** by default
+- **no auto-rework** after Fail
+
 [中文说明](#cursor-plan-build-judge-中文)
+
+## Quick start
+
+```text
+/plan-build-judge
+Task: Refactor this CSV parser safely without changing output behavior.
+```
+
+The agent should produce a Planner spec first, then wait for your go-ahead (`LGTM` / `continue` / `按这个做`) before Builder and Judge.
+
+## Workflow
+
+```mermaid
+flowchart LR
+    A[User Task] --> B[Planner<br/>Spec + Acceptance Criteria]
+    B --> C[User Confirm]
+    C --> D[Builder<br/>Implementation]
+    D --> E[Judge<br/>Evidence-based Review]
+    E --> F{Pass?}
+    F -->|Yes| G[Done]
+    F -->|No| H[Wait for User Decision]
+```
 
 ## Why this exists
 
@@ -184,7 +217,10 @@ MIT
 
 # Cursor Plan-Build-Judge（中文）
 
-一个可复用的 Cursor Skill，用于复杂任务。
+**先规格化，再受控执行，最后基于证据验收。**
+
+一个可复用的 Cursor Skill，用于复杂任务。  
+当前版本：**v0.1.0**
 
 它采用三阶段工作流：
 
@@ -192,7 +228,37 @@ MIT
 - **Builder（执行）** — 严格按规格实现
 - **Judge（验收）** — 对照原始需求、规格与验收标准，基于真实证据审查结果
 
+差异化默认行为：
+
+- **先规格化（spec-first）**
+- **执行不越界（bounded execution）**
+- **验收看证据（evidence-based review）**
+- **默认 Planner 后停住**
+- **Fail 后不自动返工**
+
 [Back to English](#cursor-plan-build-judge)
+
+## 最短上手
+
+```text
+/plan-build-judge-zh
+任务：在不改变输出行为的前提下，重构这个 CSV 解析脚本。
+```
+
+Agent 应先产出 Planner 规格，再等你放行（`LGTM` / `继续` / `按这个做`），然后进入 Builder 与 Judge。
+
+## 流程图
+
+```mermaid
+flowchart LR
+    A[用户任务] --> B[Planner<br/>规格 + 验收标准]
+    B --> C[用户确认]
+    C --> D[Builder<br/>实现]
+    D --> E[Judge<br/>基于证据验收]
+    E --> F{通过?}
+    F -->|是| G[完成]
+    F -->|否| H[等待用户决定]
+```
 
 ## 为什么需要它
 
