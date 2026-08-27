@@ -1,8 +1,11 @@
 # Cursor Plan-Build-Judge
 
+A reusable agent workflow for turning vague tasks into testable specifications, bounded execution, and evidence-based verification.
+
 **Plan first. Build within bounds. Judge by evidence.**
 
-A reusable Cursor skill for complex tasks.  
+This is an Agent Engineering skill, not a one-off Cursor prompt: **Planner → Builder → Judge**, with explicit approval gates and no blind self-evaluation.
+
 Current version: **v0.1.0**
 
 It applies a three-stage workflow:
@@ -18,6 +21,14 @@ Differentiating defaults:
 - **evidence-based review**
 - **stop after Planner** by default
 - **no auto-rework** after Fail
+
+## Engineering highlights
+
+- **Spec-first.** Planner must emit objective, constraints, assumptions, edge cases, and acceptance criteria before any implementation.
+- **Bounded execution.** Builder may not silently expand or shrink scope.
+- **Evidence-based Judge.** Pass/Fail is based on diffs, files, logs, or tests — not “done”.
+- **Human gates.** Default stop after Planner; Fail does not auto-rework.
+- **Not a runtime agent.** This repo is a reusable skill (`SKILL.md`), not a hosted agent service or eval harness.
 
 [中文说明](#cursor-plan-build-judge-中文)
 
