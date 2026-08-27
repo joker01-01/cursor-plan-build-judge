@@ -1,3 +1,11 @@
+<p>
+  <a href="#english"><kbd>&nbsp;English&nbsp;</kbd></a>
+  &nbsp;
+  <a href="#zhong-wen"><kbd>&nbsp;中文&nbsp;</kbd></a>
+</p>
+
+<a id="english"></a>
+
 # Cursor Plan-Build-Judge
 
 A reusable agent workflow for turning vague tasks into testable specifications, bounded execution, and evidence-based verification.
@@ -29,8 +37,6 @@ Differentiating defaults:
 - **Evidence-based Judge.** Pass/Fail is based on diffs, files, logs, or tests — not “done”.
 - **Human gates.** Default stop after Planner; Fail does not auto-rework.
 - **Not a runtime agent.** This repo is a reusable skill (`SKILL.md`), not a hosted agent service or eval harness.
-
-[中文说明](#cursor-plan-build-judge-中文)
 
 ## Quick start
 
@@ -226,7 +232,15 @@ MIT
 
 ---
 
+<a id="zhong-wen"></a>
+
 # Cursor Plan-Build-Judge（中文）
+
+<p>
+  <a href="#english"><kbd>&nbsp;English&nbsp;</kbd></a>
+  &nbsp;
+  <a href="#zhong-wen"><kbd>&nbsp;中文&nbsp;</kbd></a>
+</p>
 
 **先规格化，再受控执行，最后基于证据验收。**
 
@@ -247,7 +261,6 @@ MIT
 - **默认 Planner 后停住**
 - **Fail 后不自动返工**
 
-[Back to English](#cursor-plan-build-judge)
 
 ## 最短上手
 
