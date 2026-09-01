@@ -5,6 +5,12 @@
 
 # Plan-Build-Judge for Cursor and Claude Code
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-800080?style=flat-square)](LICENSE)
+![Platforms: Cursor | Claude Code](https://img.shields.io/badge/Platforms-Cursor%20%7C%20Claude%20Code-007ACC?style=flat-square)
+![Workflow: Planner → Builder → Judge](https://img.shields.io/badge/Workflow-Planner%20%E2%86%92%20Builder%20%E2%86%92%20Judge-D97706?style=flat-square)
+![Gate: Human Approval](https://img.shields.io/badge/Gate-Human%20Approval-6A1B9A?style=flat-square)
+[![Skill validation](https://github.com/joker01-01/cursor-plan-build-judge/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/joker01-01/cursor-plan-build-judge/actions/workflows/validate-skills.yml)
+
 > **How do you stop coding agents from drifting?**
 
 Plan-Build-Judge is a reusable Agent Skill for complex tasks:
